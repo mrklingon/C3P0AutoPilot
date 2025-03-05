@@ -9,7 +9,7 @@ This game lets you steer the Millenium Falcon, and shoot asteroids and Star Dest
 
 Touch #1 on the NeoTrinkey to fire lasers, and touch #2 to toggle on a random "jiggler" that moves the ship around, randomly shooting.
 
-Touch #1 ad #2 together to end program.
+Touch #1 and #2 together to end program.
 
 Flashes green when autopilot is engaged, and red when it ends. Ending program flashes gold.
 
