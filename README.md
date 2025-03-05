@@ -2,7 +2,7 @@
 
 ![Picture of C3P0 at pilot seat of Starspeeder, next to AC-38, "Ace" who is suppposed to pilot](https://media.wdwnt.com/2018/06/ace594356LARGE.jpg)
 
-Simple "mouse jiggler" for playing arcade games in a browser.
+Simple "mouse jiggler" for playing arcade games in a browser.  (https://en.wikipedia.org/wiki/Mouse_jiggler)
 
 Designed to take over playing a simple game, for example: https://makecode.com/_JfAKKf2EUcLv
 This game lets you steer the Millenium Falcon, and shoot asteroids and Star Destroyers.
