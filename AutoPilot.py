@@ -5,6 +5,15 @@ import board
 import neopixel
 import touchio
 
+# Play a browser based arcade game, like: https://makecode.com/_JfAKKf2EUcLv
+
+# pad #1 shoots laser / flashes red
+# pad #2 toggles on/off C3P0 - moves ship at random and fires lasers - flashes
+#                 multi-colored lights. / turns red when toggled off
+# touch #1 and #2 to end program - lights flash gold.
+
+
+
 touch1 = touchio.TouchIn(board.TOUCH1)
 touch2 = touchio.TouchIn(board.TOUCH2)
 
@@ -31,12 +40,13 @@ red = (20,0,0)
 zero = (2,2,2)
 colors = [pink, gold, blue, orange,green,red]
 
-
+#define cursor keycodes
 moves = [Keycode.DOWN_ARROW,Keycode.UP_ARROW,Keycode.LEFT_ARROW,Keycode.RIGHT_ARROW]
 REPL = False
 
 
 def shoot():
+    #send random stream of " "  - to fire laser
     pixels.fill(blue)
     for x in range(1+random.randrange(4)):
         keyboard_layout.write(" ")
@@ -44,6 +54,7 @@ def shoot():
     pixels.fill(blank)
 
 def jiggle():
+    #random cursor movement
     steps = 3 + random.randrange(5)
     for i in range(steps):
         pixels.fill(random.choice(colors))
@@ -73,22 +84,22 @@ while not Done:
             pixels.fill(red)
             time.sleep(2)
 
-
+            
         else :
             print("droid engaged")
             C3P0 = True
             pixels.fill(green)
             time.sleep(.5)
-
+        
     if Val == 3 :
         Done = True
     if C3P0:
         for r in range(random.randrange(5)):
-            shoot()
+            shoot() # fire laser
             time.sleep(.25)
-            jiggle()
+            jiggle() # move ship
             time.sleep(.25)
-
+            
     time.sleep(.1)
 print("End of the Line")
 pixels.fill(gold)
